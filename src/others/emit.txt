@@ -1,0 +1,117 @@
+
+<template>
+  <h1> Welcome to TO DO LIST Application! </h1>
+  <form @submit.prevent="addTask">
+    <input type="text" name="text" v-model="text" autocomplete="off"/>
+    <button @click="addTask">ADD</button>
+  </form>
+  <ul>
+ 
+      <task_item
+        v-for="(task, index) in tasks" :key="index"
+        :task="task"
+        :index="index"
+        @editTask="editTask(index)"
+        @removeTask="removeTask(index)">
+      </task_item>
+    
+  </ul>
+
+</template>
+
+<script lang="ts" >
+import { defineComponent, ref } from 'vue';
+import task_item from "./components/task_item.vue";
+import Task from '@/interface/todo';
+
+
+
+export default defineComponent({
+  name: "App",
+
+  components:{
+    task_item
+  },
+
+  setup(){
+
+    const text=ref('')
+    const tasks=ref<Task[]>([])
+
+    function addTask(){
+      if(text.value.trim() !== '')
+      {
+        const data: Task = {
+          content: text.value,
+          finished: false,
+          id: 1231
+        };
+        tasks.value.push(data);
+        text.value = '';
+      }
+    }
+
+    function removeTask(index: number){
+      tasks.value.splice(index, 1);
+    }
+
+    function editTask(index: number){
+      const update = prompt('Enter new text: ', tasks.value[index].content)
+      if (update){
+        tasks.value[index].content = update;
+      }
+    }
+
+    return {text, addTask, removeTask, editTask, tasks}
+  }
+});
+
+</script>
+
+<style>
+
+</style>
+
+//////////////////////////////////////////////////////////////////////
+<template>
+    <dl>
+        <input type="checkbox" id="text" v-model="lclTasks.finished"/>
+        <span :class="{ 'completed-content': lclTasks.finished }">{{ lclTasks.content }}</span>
+        <button @click="removeTask(task.id)">Remove</button>
+        <button @click="editTask(task.id)">Edit</button> 
+    </dl>
+</template>
+
+<script lang="ts">
+    import {defineComponent, ref } from 'vue';
+    import Task from '@/interface/todo';
+    
+    export default defineComponent({
+        name: 'task_item',
+        props:{
+            task:{
+            type: Object as () => Task,
+            required: true,},
+        },
+        emit:['removeTask', 'editTask'],
+        setup(props, {emit}){
+            const lclTasks = ref<Task>({...props.task});
+            
+            function removeTask(index: number):void { 
+                emit('removeTask')
+            }
+                
+            function editTask(index: number):void {
+                const update = prompt('Enter new text: ', lclTasks.value.content)
+                if (update){
+                    const updateText = {...lclTasks.value, text: update};
+                    lclTasks.value = updateText;
+                    emit('editTask', update)
+                }
+            }
+        return{lclTasks, removeTask, editTask,}
+        }
+        
+    });
+
+</script>

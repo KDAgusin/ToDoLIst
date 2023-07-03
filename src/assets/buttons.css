@@ -1,0 +1,63 @@
+button3 {
+    background-color: white; /* Green */
+    background-image: linear-gradient(to right,orange, rgba(255,0,0,1));
+    border: none;
+    color: white;
+    padding: 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: 0.4s;
+    cursor: pointer;
+    
+    border-radius: 6px;
+  
+  }
+  button3:hover {
+    background-color: #f44336;
+    box-shadow: 0 1px 1px 0 white, 0 6px 10px 0 white;
+    color: white;
+  }
+button2 {
+    background-color: white; /* Green */
+    background-image: linear-gradient(to right,  rgb(118, 6, 159),blue);
+    border: none;
+    color: white;
+    padding: 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: 0.4s;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  button2:hover {
+    background-color: #f44336;
+    box-shadow: 0 1px 1px 0 white, 0 6px 10px 0 white;
+    color: white;
+  }
+button1 {
+    background-color: rgb(45, 41, 41); /* Green */
+    background-image: linear-gradient(to right, yellow,orange, rgba(255,0,0,1), rgb(118, 6, 159),blue);
+    border: none;
+    color: white;
+    padding: 3px 103px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: 0.4s;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  button1:hover {
+    background-color: red;
+    background-image: linear-gradient(to left, yellow,orange, rgba(255,0,0,1), rgb(118, 6, 159),blue);
+    box-shadow: 0 1px 1px 0 white, 0 6px 10px 0 white;
+    color: white;
+  }

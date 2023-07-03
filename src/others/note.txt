@@ -1,0 +1,60 @@
+<template>
+    <h1> Welcome to TO DO LIST Application! </h1>
+    <form @submit.prevent="addTask">
+      <input type="text" name="text" v-model="text" autocomplete="off"/>
+      <button @click="addTask">ADD</button>
+    </form>
+    <ul>
+      <dl v-for="(list, index) in tasks" :key="index">{{ list.content }} 
+      <input type="checkbox" id="text" v-model="tasks.filter.finished">
+      <span :class="{ 'completed-content': tasks.filter.finished }"></span>
+      <button @click="removeTask(index)">Remove</button>
+      <button @click="editTask(index)">Edit</button>
+      </dl>
+    </ul>
+</template>
+
+<script lang="ts" >
+import { defineComponent, ref } from 'vue';
+
+interface task{
+  content: string;
+  finished: boolean;
+}
+
+
+export default defineComponent({
+
+  setup(){
+
+    const text=ref('')
+    const tasks=ref<task[]>([])
+  
+    function addTask(){
+      if(text.value.trim() !== '')
+      {
+        tasks.value.push({content: text.value, finished: false});
+        text.value = '';
+      }
+    }
+
+    function removeTask(index: number){
+      tasks.value.splice(index, 1);
+    }
+
+    function editTask(index: number){
+      const update = prompt('Enter new text: ', tasks.value[index].content)
+      if (update){
+        tasks.value[index].content = update;
+      }
+    }
+
+    return {text, addTask, removeTask, tasks}
+  }
+});
+
+</script>
+
+<style>
+
+</style>

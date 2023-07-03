@@ -1,0 +1,78 @@
+<template>
+    <body>
+    <div class="glowing">
+        
+        <span style="--i:1;"></span>
+        
+        <span style="--i:2;"></span>
+        
+        <span style="--i:3;"></span>
+        
+      </div>
+    </body>
+    <body>
+      
+      <div class="glowing">
+        
+        <span style="--i:1;"></span>
+        
+        <span style="--i:2;"></span>
+        
+        <span style="--i:3;"></span>
+        
+      </div>
+    </body>
+    <body>
+      
+      <div class="glowing">
+        
+        <span style="--i:1;"></span>
+        
+        <span style="--i:2;"></span>
+        
+        <span style="--i:3;"></span>
+        
+      </div>
+    </body>
+    <body>
+      
+      <div class="glowing">
+        
+        <span style="--i:1;"></span>
+        
+        <span style="--i:2;"></span>
+        
+        <span style="--i:3;"></span>
+        
+      </div>
+    </body>
+    <body>
+      
+      <div class="glowing">
+        
+        <span style="--i:1;"></span>
+        
+        <span style="--i:2;"></span>
+        
+        <span style="--i:3;"></span>
+        
+      </div>
+    </body>
+    <body>
+      <div class="glowing">
+        
+        <span style="--i:1;"></span>
+        
+        <span style="--i:2;"></span>
+        
+        <span style="--i:;"></span>
+        
+      </div>
+    </body>
+</template>
+
+<script lang="ts">
+
+</script>
+
+

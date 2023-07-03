@@ -1,0 +1,18 @@
+import {ref} from 'vue'
+import {useToDo} from './use-todo'
+import Task from '@/interface/task'
+
+
+export function useData(){
+    const {text} = useToDo();
+
+    const data: Task = {
+        content: text.value,
+        finished: false,
+        id: Math.random()*10000,
+      };
+
+    const tasks=ref<Task[]>([]);
+
+    return{data, tasks}
+}

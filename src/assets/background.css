@@ -1,0 +1,191 @@
+/* .Form {
+  color: white;
+  font-size: 30px;
+  font-family: 'Cooper Black';
+  margin-top: 20px;
+  text-align: center;
+
+} */
+
+.list{
+    color:white;
+    align-items: center;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.textbox{
+    width: 30%;
+    height: 25px;
+}
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+body {
+    display: inline; 
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    min-height: 100vh;
+    background: #000;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.glowing {
+    position: relative;
+    min-width: 700px;
+    height: 550px;
+    margin: -150px;
+    transform-origin: right;
+    animation: colorChange 3s linear infinite;
+  }
+  
+  .glowing:nth-child(even) {
+    transform-origin: left;
+  }
+  
+  @keyframes colorChange {
+    0% {
+      filter: hue-rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  .glowing span {
+    position: absolute;
+    top: calc(80px * var(--i));
+    left: calc(80px * var(--i));
+    bottom: calc(80px * var(--i));
+    right: calc(80px * var(--i));
+  }
+  
+  .glowing span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    background: #f00;
+    border-radius: 50%;
+  }
+  
+  .glowing span:nth-child(3n + 1)::before {
+    background: rgba(134,255,0,1);
+    box-shadow: 0 0 20px rgba(134,255,0,1),
+      0 0 40px rgba(134,255,0,1),
+      0 0 60px rgba(134,255,0,1),
+      0 0 80px rgba(134,255,0,1),
+      0 0 0 8px rgba(134,255,0,.1);
+  }
+  
+  .glowing span:nth-child(3n + 2)::before {
+    background: rgba(255,214,0,1);
+    box-shadow: 0 0 20px rgba(255,214,0,1),
+      0 0 40px rgba(255,214,0,1),
+      0 0 60px rgba(255,214,0,1),
+      0 0 80px rgba(255,214,0,1),
+      0 0 0 8px rgba(255,214,0,.1);
+  }
+  
+  .glowing span:nth-child(3n + 3)::before {
+    background: rgba(0,226,255,1);
+    box-shadow: 0 0 20px rgba(0,226,255,1),
+      0 0 40px rgba(0,226,255,1),
+      0 0 60px rgba(0,226,255,1),
+      0 0 80px rgba(0,226,255,1),
+      0 0 0 8px rgba(0,226,255,.1);
+  }
+  
+  .glowing span:nth-child(3n + 1) {
+    animation: animate 10s alternate infinite;
+  }
+  
+  .glowing span:nth-child(3n + 2) {
+    animation: animate-reverse 3s alternate infinite;
+  }
+  
+  .glowing span:nth-child(3n + 3) {
+    animation: animate 8s alternate infinite; 
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: rotate(180deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animate-reverse {
+    0% {
+      transform: rotate(360deg);
+    }
+    
+    50% {
+      transform: rotate(180deg);
+    }
+    
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+
+.catto{
+  height:auto;
+  max-width:20%;
+  position: relative;
+  margin: -100px;
+  transform-origin: right;
+  animation: colorChange 3s linear infinite;
+}
+
+.catto:nth-child(even) {
+  transform-origin: left;
+}
+
+.catto span {
+  position: absolute;
+  top: calc(80px * var(--i));
+  left: calc(80px * var(--i));
+  bottom: calc(80px * var(--i));
+  right: calc(80px * var(--i));
+}
+
+.catto span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  background: #f00;
+  border-radius: 50%;
+}
+
+.catto span:nth-child(3n + 1) {
+  animation: animate 10s alternate infinite;
+}
+
+.catto span:nth-child(3n + 2) {
+  animation: animate-reverse 3s alternate infinite;
+}
+
+.catto span:nth-child(3n + 3) {
+  animation: animate 8s alternate infinite; 
+}
