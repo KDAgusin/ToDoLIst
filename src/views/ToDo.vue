@@ -103,8 +103,8 @@ export default defineComponent({
   },
 
   setup(){
-    const {addTask,text,tasks} = useToDo();
-    return {addTask, text, tasks}
+    const {addTask,text} = useToDo();
+    return {addTask, text}
     
   }
 });

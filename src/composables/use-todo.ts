@@ -20,6 +20,7 @@ export function useToDo(){
             id: Math.random()*10000,
           };
             tasks.value.push(data);
+            console.log(tasks.value);
             text.value = '';
         }
     }

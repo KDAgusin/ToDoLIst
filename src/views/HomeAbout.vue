@@ -10,12 +10,6 @@
     <img class="catto" alt="catto" src="../assets/catto.png">
     <img class="catto" alt="catto" src="../assets/catto.png">
     <img class="catto" alt="catto" src="../assets/catto.png">
-    <img class="catto" alt="catto" src="../assets/catto.png">
-    <img class="catto" alt="catto" src="../assets/catto.png">
-    <img class="catto" alt="catto" src="../assets/catto.png">
-    <img class="catto" alt="catto" src="../assets/catto.png">
-    <img class="catto" alt="catto" src="../assets/catto.png">
-    <img class="catto" alt="catto" src="../assets/catto.png">
   </div>
 </template>
 
